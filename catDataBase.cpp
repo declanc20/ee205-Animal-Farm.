@@ -12,6 +12,6 @@
 #include<stdio.h>
 #include "catDataBase.h"
 
-struct Cat dataBase[MAX_CATS];
-NumCats numOfCats = 0;
+/*struct Cat dataBase[MAX_CATS];
+NumCats numOfCats = 0;*/
 

@@ -22,7 +22,7 @@
 
 
 int main(){
-
+/*
     addCat( "Loki", MALE, PERSIAN, true, 8.5, BLACK, WHITE, 101 ) ;
 
     addCat( "Milo", MALE, MANX, true, 7.0, BLACK, RED, 102 ) ;
@@ -35,27 +35,27 @@ int main(){
 
     addCat( "Chili", UNKNOWN_GENDER, SHORTHAIR, false, 19.0, WHITE, BLACK, 106 ) ;
 
-#ifdef DEBUG
+#ifdef DEBUG*/
     /*fails because too long of a name*/
-   assert(addCat( "fkjebfkjbekfjbwekjbkjbkjebkjwebkjwbekjbwekjfbkejwbfkjbfk"
+   /*assert(addCat( "fkjebfkjbekfjbwekjbkjbkjebkjwebkjwbekjbwekjfbkejwbfkjbfk"
             "jeleflebwekfkewfkwpefhpoefpojwefojd;lw;dljqw;ldj;slmd;wpq ",
             UNKNOWN_GENDER, SHORTHAIR, false, 19.0, BLACK, PINK, 107 )
-            == FALSE) ;
+            == FALSE) ;*/
    /*invalid index failure*/
-   assert(printCat(8000) );
+   //assert(printCat(8000) );
    /*fails because no cat with that name*/
-   assert(findCat("Nonexistent"));
+   //assert(findCat("Nonexistent"));
    /*falis because no cat with that name*/
-   assert(updateCatName(23, "Fake") ==FALSE);
+   //assert(updateCatName(23, "Fake") ==FALSE);
    /*fails because string length is 0*/
-   assert(updateCatName(1, "") == FALSE);
+   //assert(updateCatName(1, "") == FALSE);
    /*fails because cant update a cat with name more than 50 chars*/
-   assert(updateCatName(1," eefiheofhowehfoihfowehlfwelkhlkwehlkwelknweld"
-                     "kjflwekjflkewflkewflkjwlekfjlwkejfljwefe;wejf") == FALSE);
+   //assert(updateCatName(1," eefiheofhowehfoihfowehlfwelkhlkwehlkwelknweld"
+                  //   "kjflwekjflkewflkewflkjwlekfjlwkejfljwefe;wejf") == FALSE);
    /*fails because no cat with that name to update*/
-   assert(updateCatName(3, "Chili") == FALSE);
+  // assert(updateCatName(3, "Chili") == FALSE);
    /*fails to update with a negative weight*/
-   assert(updateCatWeight(0, -10.0) == FALSE);
+  /* assert(updateCatWeight(0, -10.0) == FALSE);
 #endif
 
 
@@ -72,10 +72,10 @@ int main(){
     assert(updateCatName( kali , "Capulet" ) == TRUE);
     assert(updateCatWeight( kali, 9.9 ) == TRUE);
     fixCat( kali );
-    assert(printCat( kali ) == TRUE);
+    assert(printCat( kali ) == TRUE);*/
 
     /*test updating the cats new fields*/
-    assert(printCat(1) == TRUE);
+    /* assert(printCat(1) == TRUE);
     printf("updating cat 1...\n");
     updateCatCollar1(1, BLUE);
     updateCatCollar2(1, GREEN);
@@ -85,7 +85,11 @@ int main(){
     printAllCats();
 
     deleteAllCats();
-    printAllCats();
+    printAllCats();*/
+
+    cout << "Starting" << Animal_Farm << endl ;
+
+    cout << "Done with " << Animal_Farm << endl;
 
     return 0;
 

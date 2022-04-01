@@ -16,7 +16,7 @@
 #include<stdbool.h>
 #include"updateCats.h"
 
-bool updateCatName(int catNum, char newName[]){
+/*bool updateCatName(int catNum, char newName[]){
 
     bool flag = 0;
     if (catNum < 0 || catNum >= MAX_CATS){
@@ -97,5 +97,5 @@ void updateCatCollar2(const int catNum, const enum Color newColor){
 void updateLicense(const int catNum, const unsigned long long newLicense){
 
     dataBase[catNum].license = newLicense;
-}
+}*/
 

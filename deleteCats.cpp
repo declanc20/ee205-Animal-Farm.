@@ -14,10 +14,10 @@
 #include"catDataBase.h"
 #include"deleteCats.h"
 
-void deleteAllCats(){
+//void deleteAllCats(){
 
     /*erase all database entries*/
-    char empty[2] = "";
+   /* char empty[2] = "";
     for (int i = numOfCats; i > 0; i--){
         strcpy(dataBase[i].name, empty);
         dataBase[i].gender = UNKNOWN_GENDER;
@@ -29,5 +29,5 @@ void deleteAllCats(){
 
     numOfCats = 0; //set the high water mark to zero
 
-}
+}*/
 

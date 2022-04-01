@@ -16,7 +16,7 @@
 #include"addCats.h"
 #include"config.h"
 
-bool addCat(const char name[], const enum Gender gender, const enum Breed breed, const bool isfixed, const Weight weight, const enum Color collar1, const enum Color collar2,               const unsigned long long license ){
+/*bool addCat(const char name[], const enum Gender gender, const enum Breed breed, const bool isfixed, const Weight weight, const enum Color collar1, const enum Color collar2,               const unsigned long long license ){
 
     bool flag = 0; //flag to check that all conditions passed remains 0 if all passed
 
@@ -48,11 +48,11 @@ bool addCat(const char name[], const enum Gender gender, const enum Breed breed,
     if ( weight <=0 ) { //weight needs to be positive nonzero value
         flag = 1;
         return flag;
-    }
+    }*/
 
 
     /*if all validation checks passed, fill database*/
-    if (flag == 0){
+   /* if (flag == 0){
         strcpy(dataBase[numOfCats].name,name);
         dataBase[numOfCats].gender = gender;
         dataBase[numOfCats].breed = breed;
@@ -63,12 +63,12 @@ bool addCat(const char name[], const enum Gender gender, const enum Breed breed,
         dataBase[numOfCats].license = license;
         numOfCats++;
         return numOfCats;
-    }
+    }*/
 
         /*if any validation check fails print error*/
-    else{
+   /* else{
         fprintf(stderr, "%s: Cannot add cat: %d to database\n", PROGRAM_NAME, numOfCats);
     }
 
     return 0;
-}
+}*/

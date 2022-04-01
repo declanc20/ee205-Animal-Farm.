@@ -18,10 +18,10 @@
 #include"config.h"
 #include"convertenum.h"
 
-bool printCat( int catNum){
+//bool printCat( int catNum){
 
     /*print bad cat for trying to find a cat outside of the range of database*/
-    if (catNum < 0 || catNum > (MAX_CATS-1)){ //max_cats-1 because we start at cat 0 and go to 29 for indexes.
+   /* if (catNum < 0 || catNum > (MAX_CATS-1)){ //max_cats-1 because we start at cat 0 and go to 29 for indexes.
         fprintf(stderr, "%s: animalFarm0: Bad cat [%d]\n", PROGRAM_NAME, catNum);
         return FALSE;
     }
@@ -73,4 +73,4 @@ bool findCat( char name[]){
     }
 
     return 0;
-}
+}*/
