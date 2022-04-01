@@ -8,6 +8,16 @@
 /// @author Declan Campbell <declanc@hawaii.edu>
 /// @date   31_Mar_2022
 ///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///         University of Hawaii, College of Engineering
+/// @brief  ee205_lab_08d_animal_farm_1_to_clion - EE 205 - Spr 2022
+///
+/// @file Cat.h
+/// @version 1.0
+///
+/// @author Declan Campbell <declanc@hawaii.edu>
+/// @date   31_Mar_2022
+///////////////////////////////////////////////////////////////////////////////
 
 #pragma once
 
@@ -25,6 +35,4 @@ protected:
     Weight weight;
 
 };
-
-
 
