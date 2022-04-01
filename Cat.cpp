@@ -10,3 +10,40 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "Cat.h"
+
+
+const char *Cat::getName() const {
+    return name;
+}
+
+Gender Cat::getGender() const {
+    return gender;
+}
+
+void Cat::setGender(Gender gender) {
+    Cat::gender = gender;
+}
+
+Breed Cat::getBreed() const {
+    return breed;
+}
+
+void Cat::setBreed(Breed breed) {
+    Cat::breed = breed;
+}
+
+bool Cat::isCatFixed1() const {
+    return isCatFixed;
+}
+
+void Cat::setIsCatFixed(bool isCatFixed) {
+    Cat::isCatFixed = isCatFixed;
+}
+
+Weight Cat::getWeight() const {
+    return weight;
+}
+
+void Cat::setWeight(Weight weight) {
+    Cat::weight = weight;
+}

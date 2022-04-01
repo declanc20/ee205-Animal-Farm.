@@ -28,7 +28,7 @@
 
 class Cat {
 protected: //Member varaibles only available to the Cat class
-    char* name [MAX_CAT_NAME];
+    char name [MAX_CAT_NAME];
     enum Gender gender;
     enum Breed breed;
     bool isCatFixed;
@@ -42,6 +42,24 @@ public: //contructors
 
     Cat (const char* newName ,const Gender newGender,const Breed newBreed,const Weight newWeight);
 
+public: //Getters and setters
+    const char *getName() const;
+
+    Gender getGender() const;
+
+    void setGender(Gender gender);
+
+    Breed getBreed() const;
+
+    void setBreed(Breed breed);
+
+    bool isCatFixed1() const;
+
+    void setIsCatFixed(bool isCatFixed);
+
+    Weight getWeight() const;
+
+    void setWeight(Weight weight);
 
 
 };
