@@ -27,15 +27,22 @@
 #define MAX_CAT_NAME (50)
 
 class Cat {
-protected:
+protected: //Member varaibles only available to the Cat class
     char* name [MAX_CAT_NAME];
     enum Gender gender;
     enum Breed breed;
     bool isCatFixed;
     Weight weight;
 
-public:
+public: //public member varaibles
     Cat* next; //pointer to the next cat object
+
+public: //contructors
+    Cat();
+
+    Cat (const char* newName ,const Gender newGender,const Breed newBreed,const Weight newWeight);
+
+
 
 };
 
