@@ -34,5 +34,8 @@ protected:
     bool isCatFixed;
     Weight weight;
 
+public:
+    Cat* next; //pointer to the next cat object
+
 };
 
