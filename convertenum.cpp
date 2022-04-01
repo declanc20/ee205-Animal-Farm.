@@ -16,7 +16,7 @@
 #include"convertenum.h"
 
 /*converts enum color value to color name as a string*/
-/*char* colorName(const enum Color color){
+char* colorName(const enum Color color){
     switch(color){
         case 0: return "BLACK";
         case 1: return "WHITE";
@@ -26,10 +26,10 @@
         case 5: return "PINK";
     }
     return "NULL";
-}*/
+}
 
 /*converts enum breed value to breed name as string*/
-/*char* breedName(const enum Breed breed){
+char* breedName(const enum Breed breed){
     switch(breed){
         case 0: return "UNKOWN_BREED";
         case 1: return "MAINE_COON";
@@ -39,16 +39,16 @@
         case 5: return "SPHYNX";
     }
     return "NULL";
-}*/
+}
 
 /*converts enum gender value to gender name as string*/
-/*char* genderName(const enum Gender gender){
+char* genderName(const enum Gender gender){
     switch(gender){
         case 0: return "UNKOWN_GENDER";
         case 1: return "MALE";
         case 2: return "FEMALE";
     }
     return "NULL";
-}*/
+}
 
 
