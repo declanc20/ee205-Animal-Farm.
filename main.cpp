@@ -9,7 +9,7 @@
 /// @date   17_Mar_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-#include<stdio.h>
+/*#include<stdio.h>
 #include<string.h>
 #include<stdbool.h>
 #include"assert.h"
@@ -18,10 +18,15 @@
 #include"reportCats.h"
 #include"updateCats.h"
 #include"deleteCats.h"
-#include"convertenum.h"
+#include"convertenum.h"*/
 
+#include<iostream>
+#include"config.h"
+
+using namespace std;
 
 int main(){
+
 /*
     addCat( "Loki", MALE, PERSIAN, true, 8.5, BLACK, WHITE, 101 ) ;
 
@@ -87,9 +92,9 @@ int main(){
     deleteAllCats();
     printAllCats();*/
 
-    cout << "Starting" << Animal_Farm << endl ;
+    cout << "Starting " << PROGRAM_TITLE << endl ;
 
-    cout << "Done with " << Animal_Farm << endl;
+    cout << "Done with " << PROGRAM_TITLE << endl;
 
     return 0;
 
