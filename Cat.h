@@ -46,16 +46,12 @@ public: //contructors
 
     Cat (const char* newName ,const Gender newGender,const Breed newBreed,const Weight newWeight);
 
-public: //Getters and setters
+public: //Public Getters and setters
     const char *getName() const;
 
     Gender getGender() const;
 
-    void setGender(Gender gender);
-
     Breed getBreed() const;
-
-    void setBreed(Breed breed);
 
     bool isCatFixed1() const;
 
@@ -64,6 +60,20 @@ public: //Getters and setters
     Weight getWeight() const;
 
     void setWeight(Weight weight);
+
+protected: //cant change a cats breed or gender so protect these
+    void setGender(Gender gender);
+    void setBreed(Breed breed);
+
+public: //validation functions
+    bool validateName(const char* newName);
+    bool validateGender(const Gender newGender  );
+    bool validateBreed(const Breed newBreed  );
+    bool validateWeight(const Weight newWeight );
+
+public: //public functions
+    bool print();
+    bool validate();
 
 
 };
