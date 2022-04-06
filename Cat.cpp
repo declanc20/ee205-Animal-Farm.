@@ -15,6 +15,9 @@
 
 #include "Cat.h"
 
+using namespace std;
+
+//set all Cat attributes to "blank"
 void Cat::initializeToZero() {
     memset (name, 0, MAX_CAT_NAME);
     gender = UNKNOWN_GENDER;
@@ -22,10 +25,15 @@ void Cat::initializeToZero() {
     isCatFixed = false;
     weight = UNKNOWN_WEIGHT;
     next = nullptr;
+}
 
+//Create the instance of a Cat object with all default values
+Cat::Cat() {
+    initializeToZero();
 }
 
 
+//getters
 const char *Cat::getName() const {
     return name;
 }
@@ -42,6 +50,8 @@ Breed Cat::getBreed() const {
     return breed;
 }
 
+
+//setters
 void Cat::setBreed(Breed breed) {
     Cat::breed = breed;
 }
@@ -62,7 +72,8 @@ void Cat::setWeight(Weight weight) {
     Cat::weight = weight;
 }
 
-Cat::Cat() {}
+
+
 
 Cat::Cat(const char *newName, const Gender newGender, const Breed newBreed, const Weight newWeight) {
 
