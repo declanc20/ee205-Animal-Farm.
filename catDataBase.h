@@ -23,9 +23,9 @@
 
 enum Gender{ UNKNOWN_GENDER, MALE, FEMALE };
 enum Breed{ UNKOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
-enum Color{ BLACK, WHITE, RED, BLUE, GREEN, PINK};
+//enum Color{ BLACK, WHITE, RED, BLUE, GREEN, PINK};
 
-struct Cat {  //database is
+/*struct Cat {  //database is
     char                 name[MAX_NAME];
     enum                 Gender gender;
     enum                 Breed breed;
@@ -34,10 +34,11 @@ struct Cat {  //database is
     enum                 Color collarColor1;
     enum                 Color collarColor2;
     unsigned long long   license;
-};
+};*/
 
     typedef float Weight;
-    typedef int   NumCats;
-extern struct Cat dataBase[MAX_CATS];
+    const Weight UNKOWN_WEIGHT = -1; //unknwn weight is a non possible weight
+    //typedef int   NumCats;
+//extern struct Cat dataBase[MAX_CATS];
 
-extern NumCats numOfCats; //global variable for number of cats in database
+//extern NumCats numOfCats; //global variable for number of cats in database

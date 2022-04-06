@@ -9,7 +9,21 @@
 /// @date   31_Mar_2022
 ///////////////////////////////////////////////////////////////////////////////
 
+#include <cstring>
+#include <iostream>
+
+
 #include "Cat.h"
+
+void Cat::initializeToZero() {
+    memset (name, 0, MAX_CAT_NAME);
+    gender = UNKNOWN_GENDER;
+    breed = UNKOWN_BREED;
+    isCatFixed = false;
+    weight = UNKNOWN_WEIGHT;
+    next = nullptr;
+
+}
 
 
 const char *Cat::getName() const {
@@ -46,4 +60,10 @@ Weight Cat::getWeight() const {
 
 void Cat::setWeight(Weight weight) {
     Cat::weight = weight;
+}
+
+Cat::Cat() {}
+
+Cat::Cat(const char *newName, const Gender newGender, const Breed newBreed, const Weight newWeight) {
+
 }

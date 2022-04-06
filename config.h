@@ -12,3 +12,9 @@
 #pragma once
 
 #define PROGRAM_TITLE "Animal Farm 2"
+
+enum Gender{ UNKNOWN_GENDER, MALE, FEMALE };
+enum Breed{ UNKOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
+
+typedef float Weight;
+const Weight UNKNOWN_WEIGHT = -1; //unknwn weight is a non possible weight

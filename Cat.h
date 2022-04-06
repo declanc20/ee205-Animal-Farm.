@@ -22,11 +22,12 @@
 #pragma once
 
 #include"config.h"
-#include"catDataBase.h"
+
 
 #define MAX_CAT_NAME (50)
 
 class Cat {
+
 protected: //Member varaibles only available to the Cat class
     char name [MAX_CAT_NAME];
     enum Gender gender;
@@ -36,6 +37,9 @@ protected: //Member varaibles only available to the Cat class
 
 public: //public member varaibles
     Cat* next; //pointer to the next cat object
+
+private:
+    void initializeToZero();
 
 public: //contructors
     Cat();
