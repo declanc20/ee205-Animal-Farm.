@@ -78,7 +78,7 @@ Breed Cat::getBreed() const {
 }
 
 
-bool Cat::getIsCatFixed1() const {
+bool Cat::getIsCatFixed() const {
     return isCatFixed;
 }
 
@@ -144,6 +144,22 @@ bool Cat::validateWeight(const Weight newWeight ){
     else {
         return true;
     }
+}
+
+bool Cat::validate(){
+    try {
+        validateName(name);
+        validateBreed(breed);
+        validateGender(gender);
+        validateWeight(weight);
+    }
+    catch(const char* txtException){ //if any of these validations fail, print the error to console
+    cout<< "Exception" << txtException <<endl;
+    return false;
+    }
+
+    return true;
+
 }
 
 

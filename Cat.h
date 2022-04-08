@@ -59,7 +59,7 @@ public: //Public Getters and setters
 
     Breed getBreed() const;
 
-    bool getIsCatFixed1() const;
+    bool getIsCatFixed() const;
 
     Weight getWeight() const;
 

@@ -27,6 +27,7 @@
 
 #include"config.h"
 #include"Cat.h"
+#define DEBUG
 
 using namespace std;
 
@@ -34,12 +35,19 @@ int main(){
 
     cout << "Starting " << PROGRAM_TITLE << endl ;
 
-    Cat testCat = Cat();
-    assert(testCat.getName() == nullptr );
-
-
-
-    cout << "Hello??? " << PROGRAM_TITLE << endl;
+#ifdef DEBUG
+    Cat myCat = Cat();
+    /*test default sets to zero*/
+    assert(myCat.getName() != nullptr );
+    assert((strcmp(myCat.getName(), "")) == 0);
+    assert(strlen(myCat.getName()) <= MAX_CAT_NAME);
+    assert(myCat.getGender() == UNKNOWN_GENDER );
+    assert(myCat.getBreed() == UNKNOWN_BREED);
+    assert(myCat.getIsCatFixed() == false);
+    assert(myCat.getWeight() == UNKNOWN_WEIGHT);
+    assert(!myCat.validate());
+#endif
+    cout << "Hello?? " << PROGRAM_TITLE << endl;
 
 
 
