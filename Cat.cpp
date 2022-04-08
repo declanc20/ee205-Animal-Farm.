@@ -12,8 +12,7 @@
 #include <cstring>
 #include <iostream>
 #include <stdexcept>
-#include <cassert>
-#include <iomanip>
+
 
 #include "Cat.h"
 #include"config.h"

@@ -14,6 +14,7 @@
 #include<stdbool.h>
 #include"catDataBase.h"
 #include"convertenum.h"
+#include"config.h"
 
 /*converts enum color value to color name as a string*/
 char* colorName(const enum Color color){

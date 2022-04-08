@@ -11,6 +11,8 @@
 
 #pragma once
 
+#include "config.h"
+
 extern char* colorName(const enum Color color);
 extern char* breedName(const enum Breed breed);
 extern char* genderName(const enum Gender gender);

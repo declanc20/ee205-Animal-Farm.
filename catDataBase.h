@@ -21,8 +21,8 @@
 #define TRUE 1
 
 
-enum Gender{ UNKNOWN_GENDER, MALE, FEMALE };
-enum Breed{ UNKOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
+//enum Gender{ UNKNOWN_GENDER, MALE, FEMALE };
+//enum Breed{ UNKOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
 //enum Color{ BLACK, WHITE, RED, BLUE, GREEN, PINK};
 
 /*struct Cat {  //database is
