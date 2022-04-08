@@ -35,9 +35,11 @@ Cat::Cat() {
 }
 
 //contructor to populate the instance of the cat object with actual inputted information
-Cat::Cat (const char* newName ,const Gender newGender,const Breed newBreed,const Weight newWeight){
-
-
+Cat::Cat (char* newName ,const Gender newGender,const Breed newBreed,const Weight newWeight){
+    setName(newName);
+    setGender(newGender);
+    setBreed(newBreed);
+    setWeight(newWeight);
 }
 
 

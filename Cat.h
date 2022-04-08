@@ -44,7 +44,7 @@ private:
 public: //contructors
     Cat();
 
-    Cat (const char* newName ,const Gender newGender,const Breed newBreed,const Weight newWeight);
+    Cat (char* newName ,const Gender newGender,const Breed newBreed,const Weight newWeight);
 
 public: //desturctor
     ~Cat();
