@@ -59,18 +59,24 @@ const char *Cat::getName() const {
     return name;
 }
 
-void Cat::setGender(Gender gender) {
-    Cat::validateGender(gender);
-    Cat::gender = gender;
+void Cat::setGender(Gender newGender) {
+    if ( gender != UNKNOWN_GENDER){
+        throw (PROGRAM_TITLE "Can't change a cat's Gender");
+    }
+    Cat::validateGender(newGender);
+    Cat::gender = newGender;
 }
 
 Gender Cat::getGender() const {
     return gender;
 }
 
-void Cat::setBreed(Breed breed) {
-    Cat::validateBreed(breed);
-    Cat::breed = breed;
+void Cat::setBreed(Breed newBreed) {
+    if ( breed != UNKNOWN_BREED){
+        throw (PROGRAM_TITLE "Can't change a cat's Gender");
+    }
+    Cat::validateBreed(newBreed);
+    Cat::breed = newBreed;
 }
 
 Breed Cat::getBreed() const {

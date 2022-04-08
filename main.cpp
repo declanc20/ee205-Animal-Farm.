@@ -76,7 +76,14 @@ int main(){
         cout<<txt<<endl;
     }
 
-    myCat.setGender(MALE);
+    myCat.setGender(FEMALE);
+
+    try { //should succeed
+        myCat.setGender(MALE);
+        assert(false);
+    } catch (const char* txt) {
+        cout<<txt<<endl;
+    }
 
 
 
