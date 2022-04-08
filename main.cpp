@@ -107,8 +107,11 @@ int main(){
 
     myCat.setWeight((1.0 / 1024));
 
+    assert(myCat.validate()); //cat should now be valid
+    myCat.print();
+
 #endif
-    cout << "Hello?? " << PROGRAM_TITLE << endl;
+    cout << "Done With " << PROGRAM_TITLE << endl;
 
     return 0;
 

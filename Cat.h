@@ -22,6 +22,7 @@
 #pragma once
 
 #include"config.h"
+#include"convertenum.h"
 
 
 #define MAX_CAT_NAME (50)
@@ -80,9 +81,7 @@ public: //validation functions
     bool validateWeight(const Weight newWeight );
 
 public: //public functions
-    bool print();
     bool validate();
-
-
+    bool print();
 };
 

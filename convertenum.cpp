@@ -18,7 +18,7 @@
 #include"config.h"
 
 /*converts enum color value to color name as a string*/
-char* colorName(const enum Color color){
+/*char* colorName(const enum Color color){
     switch(color){
         case 0: return "BLACK";
         case 1: return "WHITE";
@@ -28,10 +28,10 @@ char* colorName(const enum Color color){
         case 5: return "PINK";
     }
     return "NULL";
-}
+}*/
 
 /*converts enum breed value to breed name as string*/
-char* breedName(const enum Breed breed){
+const char* breedName(const enum Breed breed){
     switch(breed){
         case 0: return "UNKNOWN_BREED";
         case 1: return "MAINE_COON";
@@ -44,7 +44,7 @@ char* breedName(const enum Breed breed){
 }
 
 /*converts enum gender value to gender name as string*/
-char* genderName(const enum Gender gender){
+const char* genderName(const enum Gender gender){
     switch(gender){
         case 0: return "UNKOWN_GENDER";
         case 1: return "MALE";
