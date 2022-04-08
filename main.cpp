@@ -53,12 +53,12 @@ int main(){
         cout<<txt<<endl;
     }
 
-   /* try { /////It is this one that is breaking it for some reason i think
+    try { /////It is this one that is breaking it for some reason i think
         myCat.setName("");
         assert(false); // We should never get here
     } catch (const char* txt) {
         cout<<txt<<endl;
-    }*/
+    }
 
     try { //should succeed
         myCat.setName("1");
@@ -98,6 +98,14 @@ int main(){
     myCat.setCatToFixed();
     cout<< "Is cat fixed " <<myCat.getIsCatFixed()<<endl;
 
+    try {
+        myCat.setWeight(0);
+        assert(false);
+    } catch (const char* txt) {
+        cout<<txt<<endl;
+    }
+
+    myCat.setWeight((1.0 / 1024));
 
 #endif
     cout << "Hello?? " << PROGRAM_TITLE << endl;
