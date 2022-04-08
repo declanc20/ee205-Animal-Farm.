@@ -50,7 +50,6 @@ Cat::~Cat(){
 
 //getters and setters
 
-//setters
 void Cat::setName(char* newName) {
     Cat::validateName(newName);
     strcpy(Cat::name, newName);
@@ -79,11 +78,11 @@ Breed Cat::getBreed() const {
 }
 
 
-bool Cat::isCatFixed1() const {
+bool Cat::getIsCatFixed1() const {
     return isCatFixed;
 }
 
-void Cat::setIsCatFixed(bool isCatFixed) {
+void Cat::setCatToFixed() {
     Cat::isCatFixed = isCatFixed;
 }
 

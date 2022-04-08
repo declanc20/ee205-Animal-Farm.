@@ -59,13 +59,13 @@ public: //Public Getters and setters
 
     Breed getBreed() const;
 
-    bool isCatFixed1() const;
-
-    void setIsCatFixed(bool isCatFixed);
+    bool getIsCatFixed1() const;
 
     Weight getWeight() const;
 
     void setWeight(Weight weight);
+
+    void setCatToFixed();
 
 protected: //cant change a cats breed or gender so protect these
     void setGender(Gender gender);
