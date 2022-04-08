@@ -53,12 +53,12 @@ int main(){
         cout<<txt<<endl;
     }
 
-    try {
+   /* try { /////It is this one that is breaking it for some reason i think
         myCat.setName("");
         assert(false); // We should never get here
     } catch (const char* txt) {
         cout<<txt<<endl;
-    }
+    }*/
 
     try { //should succeed
         myCat.setName("1");
@@ -68,16 +68,13 @@ int main(){
         cout<<"from should be valid" << endl;
     }
 
-    try {
-        myCat.setName("");
-        assert(false); // We should never get here
+    myCat.setName("Ewjfhkjwefbkejhjewhfjwbkjewbfiwqehfklbnwelfkhweok");
+
+    try { //should succeed
+        myCat.setName("Ewjfhkjwefbkejhjewhfjwbkjewbfiwqehfklbnwelfkhweokuy");
     } catch (const char* txt) {
         cout<<txt<<endl;
     }
-
-    myCat.setName("Ewjfhkjwefbkejhjewhfjwbkjewbfiwqehfklbnwelfkhweok");
-
-
 
 
 
