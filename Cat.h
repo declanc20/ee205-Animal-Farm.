@@ -40,6 +40,8 @@ public: //public member varaibles
 
     void setGender(Gender gender);
 
+    void setBreed(Breed breed);
+
 private:
     void dataToZero();
 
@@ -69,8 +71,7 @@ public: //Public Getters and setters
 
     void setCatToFixed();
 
-protected: //cant change a cats breed or gender so protect these
-    void setBreed(Breed breed);
+//cant change a cats breed or gender so protect these
 
 public: //validation functions
     bool validateName(const char* newName);

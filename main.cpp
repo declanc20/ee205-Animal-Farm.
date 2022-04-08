@@ -85,6 +85,16 @@ int main(){
         cout<<txt<<endl;
     }
 
+    myCat.setBreed(MANX);
+
+    try { //should succeed
+        myCat.setBreed(MAINE_COON);
+        assert(false);
+    } catch (const char* txt) {
+        cout<<txt<<endl;
+    }
+
+
 
 
 #endif

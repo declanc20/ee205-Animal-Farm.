@@ -73,7 +73,7 @@ Gender Cat::getGender() const {
 
 void Cat::setBreed(Breed newBreed) {
     if ( breed != UNKNOWN_BREED){
-        throw (PROGRAM_TITLE "Can't change a cat's Gender");
+        throw (PROGRAM_TITLE "Can't change a cat's Breed");
     }
     Cat::validateBreed(newBreed);
     Cat::breed = newBreed;
