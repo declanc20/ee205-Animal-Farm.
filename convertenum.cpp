@@ -13,6 +13,7 @@
 #include<stdio.h>
 #include<stdbool.h>
 #include"catDataBase.h"
+#include<cstring>
 #include"convertenum.h"
 #include"config.h"
 

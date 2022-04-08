@@ -46,8 +46,14 @@ public: //contructors
 
     Cat (const char* newName ,const Gender newGender,const Breed newBreed,const Weight newWeight);
 
+public: //desturctor
+    ~Cat();
+
 public: //Public Getters and setters
+    void setName(char* newName);
+
     const char *getName() const;
+
 
     Gender getGender() const;
 

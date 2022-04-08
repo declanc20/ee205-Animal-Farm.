@@ -60,6 +60,10 @@ Breed Cat::getBreed() const {
 
 
 //setters
+void Cat::setName(char* newName) {
+    strcpy(Cat::name,newName);
+}
+
 void Cat::setBreed(Breed breed) {
     Cat::breed = breed;
 }
