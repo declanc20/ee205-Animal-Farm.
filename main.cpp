@@ -46,7 +46,13 @@ int main(){
     assert(myCat.getIsCatFixed() == false);
     assert(myCat.getWeight() == UNKNOWN_WEIGHT);
     //assert(!myCat.validate());
-    //myCat.setName(nullptr);
+    try {
+        myCat.setName(nullptr);
+        assert(false); // We should never get here
+    } catch (const char* txt) {
+        cout<<txt<<endl;
+    }
+
 
 
 #endif

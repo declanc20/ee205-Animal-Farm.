@@ -100,7 +100,7 @@ Weight Cat::getWeight() const {
 bool Cat::validateName(const char* newName){
 
     if (newName == nullptr) {
-        throw invalid_argument(PROGRAM_TITLE "name can't be nullptr");
+        throw (PROGRAM_TITLE "name can't be nullptr");
     }
 
     if (strlen(newName) <= 0) {
