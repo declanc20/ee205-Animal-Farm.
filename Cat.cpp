@@ -154,8 +154,7 @@ bool Cat::validate(){
         validateWeight(weight);
     }
     catch(const char* txtException){ //if any of these validations fail, print the error to console
-    cout<< "Exception" << txtException <<endl;
-    return false;
+        cout<< "Exception" << txtException <<endl;
     }
 
     return true;

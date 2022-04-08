@@ -45,11 +45,12 @@ int main(){
     assert(myCat.getBreed() == UNKNOWN_BREED);
     assert(myCat.getIsCatFixed() == false);
     assert(myCat.getWeight() == UNKNOWN_WEIGHT);
-    assert(!myCat.validate());
+    //assert(!myCat.validate());
+    //myCat.setName(nullptr);
+
+
 #endif
     cout << "Hello?? " << PROGRAM_TITLE << endl;
-
-
 
     return 0;
 
