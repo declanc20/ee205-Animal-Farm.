@@ -23,7 +23,7 @@ using namespace std;
 void Cat::initializeToZero() {
     memset (name, 0, MAX_CAT_NAME);
     gender = UNKNOWN_GENDER;
-    breed = UNKOWN_BREED;
+    breed = UNKNOWN_BREED;
     isCatFixed = false;
     weight = UNKNOWN_WEIGHT;
     next = nullptr;
@@ -82,31 +82,36 @@ void Cat::setWeight(Weight weight) {
 
 //validation functions/methods
 bool Cat::validateName(const char* newName){
-    try {
-        if (newName == nullptr) {
-            throw invalid_argument(PROGRAM_TITLE "name can't be nullptr");
-        }
 
-        /*if (strlen(newName) <= 0) {
-            throw (PROGRAM_TITLE "name can't be blank");
-        }
-
-        if (strlen(newName) > MAX_CAT_NAME){
-            throw (PROGRAM_TITLE "");
-        }*/
-
+    if (newName == nullptr) {
+        throw invalid_argument(PROGRAM_TITLE "name can't be nullptr");
     }
 
-    catch (const invalid_argument& e) {
-        cout<<e.what()<<endl;
+    if (strlen(newName) <= 0) {
+        throw (PROGRAM_TITLE "name can't be blank");
     }
 
+    if (strlen(newName) > MAX_CAT_NAME){
+        throw (PROGRAM_TITLE "name can't be longer than MAX_CAT_NAME");
+    }
 
-    return true;
-
+    else{
+        return true;
+    }
 }
-bool validateGender(const Gender newGender  );
-bool validateBreed(const Breed newBreed  );
+
+bool validateGender(const Gender newGender  ){
+    if (newGender == UNKNOWN_GENDER){
+        throw (PROGRAM_TITLE "gender must be known");
+    }
+}
+
+bool validateBreed(const Breed newBreed  ){
+    if (newBreed == UNKNOWN_BREED){
+        throw (PROGRAM_TITLE "gender must be known");
+    }
+}
+
 bool validateWeight(const Weight newWeight );
 
 

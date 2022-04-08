@@ -21,7 +21,7 @@
     for (int i = numOfCats; i > 0; i--){
         strcpy(dataBase[i].name, empty);
         dataBase[i].gender = UNKNOWN_GENDER;
-        dataBase[i].breed = UNKOWN_BREED;
+        dataBase[i].breed = UNKNOWN_BREED;
         dataBase[i].isFixed = 0;
         dataBase[i].weight = 0;
 

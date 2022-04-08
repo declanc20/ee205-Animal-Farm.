@@ -32,7 +32,7 @@ char* colorName(const enum Color color){
 /*converts enum breed value to breed name as string*/
 char* breedName(const enum Breed breed){
     switch(breed){
-        case 0: return "UNKOWN_BREED";
+        case 0: return "UNKNOWN_BREED";
         case 1: return "MAINE_COON";
         case 2: return "MANX";
         case 3: return "SHORTHAIR";

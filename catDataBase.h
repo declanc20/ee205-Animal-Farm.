@@ -22,7 +22,7 @@
 
 
 //enum Gender{ UNKNOWN_GENDER, MALE, FEMALE };
-//enum Breed{ UNKOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
+//enum Breed{ UNKNOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
 //enum Color{ BLACK, WHITE, RED, BLUE, GREEN, PINK};
 
 /*struct Cat {  //database is
