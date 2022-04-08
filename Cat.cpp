@@ -89,7 +89,7 @@ bool Cat::getIsCatFixed() const {
 }
 
 void Cat::setCatToFixed() {
-    Cat::isCatFixed = isCatFixed;
+    Cat::isCatFixed = true;
 }
 
 void Cat::setWeight(Weight weight) {

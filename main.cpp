@@ -94,7 +94,9 @@ int main(){
         cout<<txt<<endl;
     }
 
-
+    cout<<"Is cat fixed " << myCat.getIsCatFixed()<<endl;
+    myCat.setCatToFixed();
+    cout<< "Is cat fixed " <<myCat.getIsCatFixed()<<endl;
 
 
 #endif
