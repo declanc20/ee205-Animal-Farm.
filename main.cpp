@@ -53,6 +53,32 @@ int main(){
         cout<<txt<<endl;
     }
 
+    try {
+        myCat.setName("");
+        assert(false); // We should never get here
+    } catch (const char* txt) {
+        cout<<txt<<endl;
+    }
+
+    try { //should succeed
+        myCat.setName("1");
+        //cout<<myCat.getName()<<endl;
+    } catch (const char* txt) {
+        cout<<txt<<endl;
+        cout<<"from should be valid" << endl;
+    }
+
+    try {
+        myCat.setName("");
+        assert(false); // We should never get here
+    } catch (const char* txt) {
+        cout<<txt<<endl;
+    }
+
+    myCat.setName("Ewjfhkjwefbkejhjewhfjwbkjewbfiwqehfklbnwelfkhweok");
+
+
+
 
 
 #endif
