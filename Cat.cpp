@@ -20,7 +20,7 @@
 using namespace std;
 
 //set all Cat attributes to "blank"
-void Cat::initializeToZero() {
+void Cat::dataToZero() {
     memset (name, 0, MAX_CAT_NAME);
     gender = UNKNOWN_GENDER;
     breed = UNKNOWN_BREED;
@@ -31,7 +31,7 @@ void Cat::initializeToZero() {
 
 //Create the instance of a Cat object with all default values
 Cat::Cat() {
-    initializeToZero();
+    dataToZero();
 }
 
 //contructor to populate the instance of the cat object with actual inputted information
@@ -42,33 +42,42 @@ Cat::Cat (char* newName ,const Gender newGender,const Breed newBreed,const Weigh
     setWeight(newWeight);
 }
 
+//destructor of data
+Cat::~Cat(){
+    dataToZero();
+}
 
-//getters
+
+//getters and setters
+
+//setters
+void Cat::setName(char* newName) {
+    Cat::validateName(newName);
+    strcpy(Cat::name, newName);
+}
+
 const char *Cat::getName() const {
     return name;
+}
+
+void Cat::setGender(Gender gender) {
+    Cat::validateGender(gender);
+    Cat::gender = gender;
 }
 
 Gender Cat::getGender() const {
     return gender;
 }
 
-void Cat::setGender(Gender gender) {
-    Cat::gender = gender;
+void Cat::setBreed(Breed breed) {
+    Cat::validateBreed(breed);
+    Cat::breed = breed;
 }
 
 Breed Cat::getBreed() const {
     return breed;
 }
 
-
-//setters
-void Cat::setName(char* newName) {
-    strcpy(Cat::name,newName);
-}
-
-void Cat::setBreed(Breed breed) {
-    Cat::breed = breed;
-}
 
 bool Cat::isCatFixed1() const {
     return isCatFixed;
@@ -78,13 +87,15 @@ void Cat::setIsCatFixed(bool isCatFixed) {
     Cat::isCatFixed = isCatFixed;
 }
 
+void Cat::setWeight(Weight weight) {
+    Cat::validateWeight(weight);
+    Cat::weight = weight;
+}
+
 Weight Cat::getWeight() const {
     return weight;
 }
 
-void Cat::setWeight(Weight weight) {
-    Cat::weight = weight;
-}
 
 //validation functions/methods
 bool Cat::validateName(const char* newName){
@@ -106,7 +117,7 @@ bool Cat::validateName(const char* newName){
     }
 }
 
-bool validateGender(const Gender newGender  ){
+bool Cat::validateGender(const Gender newGender  ){
     if (newGender == UNKNOWN_GENDER){
         throw (PROGRAM_TITLE "gender must be known");
     }
@@ -116,7 +127,7 @@ bool validateGender(const Gender newGender  ){
     }
 }
 
-bool validateBreed(const Breed newBreed  ){
+bool Cat::validateBreed(const Breed newBreed  ){
     if (newBreed == UNKNOWN_BREED){
         throw (PROGRAM_TITLE "gender must be known");
     }
@@ -126,7 +137,7 @@ bool validateBreed(const Breed newBreed  ){
     }
 }
 
-bool validateWeight(const Weight newWeight ){
+bool Cat::validateWeight(const Weight newWeight ){
     if(newWeight <= 0){
         throw (PROGRAM_TITLE "Weight must be greater than 0");
     }

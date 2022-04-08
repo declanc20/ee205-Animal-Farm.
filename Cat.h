@@ -39,7 +39,7 @@ public: //public member varaibles
     Cat* next; //pointer to the next cat object
 
 private:
-    void initializeToZero();
+    void dataToZero();
 
 public: //contructors
     Cat();
