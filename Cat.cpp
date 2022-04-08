@@ -11,9 +11,12 @@
 
 #include <cstring>
 #include <iostream>
-
+#include <stdexcept>
+#include <cassert>
+#include <iomanip>
 
 #include "Cat.h"
+#include"config.h"
 
 using namespace std;
 
@@ -30,6 +33,12 @@ void Cat::initializeToZero() {
 //Create the instance of a Cat object with all default values
 Cat::Cat() {
     initializeToZero();
+}
+
+//contructor to populate the instance of the cat object with actual inputted information
+Cat::Cat (const char* newName ,const Gender newGender,const Breed newBreed,const Weight newWeight){
+
+
 }
 
 
@@ -72,9 +81,34 @@ void Cat::setWeight(Weight weight) {
     Cat::weight = weight;
 }
 
+//validation functions/methods
+bool Cat::validateName(const char* newName){
+    try {
+        if (newName == nullptr) {
+            throw invalid_argument(PROGRAM_TITLE "name can't be nullptr");
+        }
+
+        /*if (strlen(newName) <= 0) {
+            throw (PROGRAM_TITLE "name can't be blank");
+        }
+
+        if (strlen(newName) > MAX_CAT_NAME){
+            throw (PROGRAM_TITLE "");
+        }*/
+
+    }
+
+    catch (const invalid_argument& e) {
+        cout<<e.what()<<endl;
+    }
 
 
-
-Cat::Cat(const char *newName, const Gender newGender, const Breed newBreed, const Weight newWeight) {
+    return true;
 
 }
+bool validateGender(const Gender newGender  );
+bool validateBreed(const Breed newBreed  );
+bool validateWeight(const Weight newWeight );
+
+
+
