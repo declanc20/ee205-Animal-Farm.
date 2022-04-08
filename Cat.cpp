@@ -104,15 +104,31 @@ bool validateGender(const Gender newGender  ){
     if (newGender == UNKNOWN_GENDER){
         throw (PROGRAM_TITLE "gender must be known");
     }
+
+    else {
+        return true;
+    }
 }
 
 bool validateBreed(const Breed newBreed  ){
     if (newBreed == UNKNOWN_BREED){
         throw (PROGRAM_TITLE "gender must be known");
     }
+
+    else{
+        return true;
+    }
 }
 
-bool validateWeight(const Weight newWeight );
+bool validateWeight(const Weight newWeight ){
+    if(newWeight <= 0){
+        throw (PROGRAM_TITLE "Weight must be greater than 0");
+    }
+
+    else {
+        return true;
+    }
+}
 
 
 
