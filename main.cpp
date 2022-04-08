@@ -76,6 +76,8 @@ int main(){
         cout<<txt<<endl;
     }
 
+    myCat.setGender(MALE);
+
 
 
 #endif

@@ -35,7 +35,7 @@ Cat::Cat() {
 }
 
 //contructor to populate the instance of the cat object with actual inputted information
-Cat::Cat (char* newName ,const Gender newGender,const Breed newBreed,const Weight newWeight){
+Cat::Cat (const char* newName ,const Gender newGender,const Breed newBreed,const Weight newWeight){
     setName(newName);
     setGender(newGender);
     setBreed(newBreed);
@@ -50,7 +50,7 @@ Cat::~Cat(){
 
 //getters and setters
 
-void Cat::setName(char* newName) {
+void Cat::setName(const char* newName) {
     Cat::validateName(newName);
     strcpy(Cat::name, newName);
 }

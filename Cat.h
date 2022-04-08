@@ -38,19 +38,21 @@ protected: //Member varaibles only available to the Cat class
 public: //public member varaibles
     Cat* next; //pointer to the next cat object
 
+    void setGender(Gender gender);
+
 private:
     void dataToZero();
 
 public: //contructors
     Cat();
 
-    Cat (char* newName ,const Gender newGender,const Breed newBreed,const Weight newWeight);
+    Cat (const char* newName ,const Gender newGender,const Breed newBreed,const Weight newWeight);
 
 public: //desturctor
     ~Cat();
 
 public: //Public Getters and setters
-    void setName(char* newName);
+    void setName(const char* newName);
 
     const char *getName() const;
 
@@ -68,7 +70,6 @@ public: //Public Getters and setters
     void setCatToFixed();
 
 protected: //cant change a cats breed or gender so protect these
-    void setGender(Gender gender);
     void setBreed(Breed breed);
 
 public: //validation functions
