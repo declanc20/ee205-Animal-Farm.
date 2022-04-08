@@ -111,6 +111,9 @@ int main(){
     myCat.print();
 
 #endif
+
+    Cat Loki = Cat();
+
     cout << "Done With " << PROGRAM_TITLE << endl;
 
     return 0;

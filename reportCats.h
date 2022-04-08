@@ -11,7 +11,11 @@
 
 #pragma once
 
+#include"Cat.h"
+
 extern bool findCat( char name[]);
 extern void printAllCats(void);
 extern bool printCat( int catNum);
+
+extern Cat* findCatByName(const char* name);
 

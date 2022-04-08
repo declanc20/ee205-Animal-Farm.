@@ -10,13 +10,26 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 
-#include<stdio.h>
+#include"Cat.h"
 #include"catDataBase.h"
-#include<stdbool.h>
-#include<string.h>
 #include"reportCats.h"
+#include<cstring>
 #include"config.h"
 #include"convertenum.h"
+
+
+
+extern Cat* findCatByName(const char* name){
+
+    //iterate through the database
+    for(Cat* pCat = catDatabaseHeadPointer; pCat != nullptr; pCat = pCat->next){
+        if(strcmp(pCat->getName(), name) == 0){ //if strings are equal have duplicate name
+            return pCat; //returns the pointer to where the duplicate string occurs.
+        }
+    }
+
+    return nullptr; //if no match foud return null
+}
 
 //bool printCat( int catNum){
 
