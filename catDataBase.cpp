@@ -9,7 +9,7 @@
 /// @date   17_Mar_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-#include<iostream>
+#include <iostream>
 #include "catDataBase.h"
 #include"reportCats.h"
 
@@ -30,16 +30,13 @@ using namespace std;
                 return false;
             }
 
-            if (findCatByName( pCat->getName()) == nullptr){
-            cout<< "duplicate name was found" <<endl;
-            return false;
+            //no matching name
+            if (findCatByName(pCat->getName()) == nullptr) {
+                cout << "duplicate name was found" << endl;
+                return false;
             }
-
-
             numOfValidCats++; //increment up the number of valid cats  if no problems
         }
-
-
 
         if(numOfCats != numOfValidCats){ //after iterating through all cats make sure valid cats equals num of cats in the data base
             cout<< "Database is invalid" << endl;
