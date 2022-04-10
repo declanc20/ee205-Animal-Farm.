@@ -19,6 +19,7 @@
 #include<cassert>
 #include<cstring>
 
+using namespace std;
 
 bool printAllCats(){
 
@@ -26,11 +27,14 @@ bool printAllCats(){
     assert(validateDatabase());
 
     //print all cats
-    for (Cat *pCat = catDatabaseHeadPointer; pCat != nullptr; pCat = pCat->next) {
+    for (Cat* pCat = catDatabaseHeadPointer; pCat != nullptr; pCat = pCat->next) {
 
             pCat -> print(); //print the current iterated cat
 
     }
+
+    //validate the database after printing
+    assert(validateDatabase());
 
     return true;
 
@@ -43,10 +47,11 @@ bool printAllCats(){
             return pCat;
         }
     //delete this DEBUG after
-        (pCat-> print());
+        //(pCat-> print());
     }
 
-    return nullptr; //if no matching name found return null
+    cout<<"ERROR: cat is not in database"<<endl;
+    return nullptr;
 
 }
 

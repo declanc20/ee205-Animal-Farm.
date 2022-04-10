@@ -113,23 +113,42 @@ int main(){
 
     // add the 6 cats
     assert(addCat(new Cat("Loki", MALE, PERSIAN, 1.0)));
-   assert(addCat(new Cat("Milo", MALE, MANX, 1.1)));
-    //assert(addCat(new Cat("Bella", FEMALE, MAINE_COON, 1.2)));
-   // assert(addCat(new Cat("Kali", FEMALE, SHORTHAIR, 1.3)));
-    //assert(addCat(new Cat("Trin", FEMALE, MANX, 1.4)));
-    //assert(addCat(new Cat("Chili", MALE, SHORTHAIR, 1.5)));
+    assert(addCat(new Cat("Milo", MALE, MANX, 1.1)));
+    assert(addCat(new Cat("Bella", FEMALE, MAINE_COON, 1.2)));
+    assert(addCat(new Cat("Kali", FEMALE, SHORTHAIR, 1.3)));
+    assert(addCat(new Cat("Trin", FEMALE, MANX, 1.4)));
+    assert(addCat(new Cat("Chili", MALE, SHORTHAIR, 1.5)));
 
-
-
-
+    //release main functions
     printAllCats();
-    //deleteAllCats();
-    //cout<<"all cats deleted"<<endl;
-    //printAllCats();
 
-    //(findCatByName("Bella")) -> print();
-    //findCatByName("Bella");
-    //assert(foundCat != nullptr);
+    #ifdef DEBUG
+    cout<<"\n \n lets find Bella \n \n"<<endl;
+    (findCatByName("Bella")) -> print();
+
+    cout<<"\n \n Is there a Belinda here?\n \n"<<endl;
+    //find cat that doesn't exist
+    findCatByName("Belinda");
+
+
+    cout<<"\n \n rip bella \n \n"<<endl;
+    deleteCat(findCatByName("Bella"));
+    cout<<"\n \n make sure she's out of the system by trying to search for her... \n \n"<<endl;
+    findCatByName("Bella");
+    cout<<"\n \n that Cat is no longer with us :( \n \n"<<endl;
+
+    try{
+    deleteCat(findCatByName("Bella"));
+    } catch (const char* txt) {
+        cout<<txt<<endl;
+    }
+    #endif
+
+
+
+    deleteAllCats();
+    printAllCats();
+
 
     cout << "Done With " << PROGRAM_TITLE << endl;
 
