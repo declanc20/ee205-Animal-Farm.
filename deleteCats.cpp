@@ -9,25 +9,71 @@
 /// @date   17_Mar_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-#include<stdio.h>
-#include<string.h>
+#include<iostream>
+#include<cassert>
+
+#include"reportCats.h"
+#include "config.h"
 #include"catDataBase.h"
 #include"deleteCats.h"
 
-//void deleteAllCats(){
+using namespace std;
 
-    /*erase all database entries*/
-   /* char empty[2] = "";
-    for (int i = numOfCats; i > 0; i--){
-        strcpy(dataBase[i].name, empty);
-        dataBase[i].gender = UNKNOWN_GENDER;
-        dataBase[i].breed = UNKNOWN_BREED;
-        dataBase[i].isFixed = 0;
-        dataBase[i].weight = 0;
+bool deleteCat(Cat* catName){
+    assert(validateDatabase()); //call validate database first
 
+    //if the cat was the head pointer (last cat added)
+    if (catName == catDatabaseHeadPointer) {
+        catDatabaseHeadPointer = catDatabaseHeadPointer->next; //set the head pointer to the nextpointer
+        delete catName;
+        numOfCats--;
+
+        assert(validateDatabase());
+        return true;
     }
 
-    numOfCats = 0; //set the high water mark to zero
+    //if not deleting the last enetered cat, need to start at thee head, traverse the list and find the
+    //cat to be deleted
+    Cat* pCat = catDatabaseHeadPointer;
+    while (pCat != nullptr){
 
-}*/
+        if(pCat -> next == catName){
+            pCat -> next = catName -> next; //rearrange the next pointer to make up for the to be deleted cat
+            delete catName; //delete the cat
+            numOfCats--; //subtract one form the number of cats in the list after deletion
+
+            assert(validateDatabase());
+
+            return true;
+        }
+
+        pCat = pCat-> next; //contniue to traverse the loop if cat to be dleted not found
+    }
+
+
+    assert(validateDatabase());
+
+    throw ("tried to delete a cat that is not in the database");
+
+}
+
+
+
+bool deleteAllCats(){
+    assert(validateDatabase()); //call validate database first
+
+    //while headpointer is not null, delet cats
+    while (catDatabaseHeadPointer != nullptr){
+        deleteCat(catDatabaseHeadPointer);
+    }
+
+
+
+    numOfCats = 0;
+
+    return true;
+
+}
+
+
 

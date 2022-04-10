@@ -11,5 +11,9 @@
 
 #pragma once
 
-extern void deleteAllCats();
+#include"Cat.h"
+
+
+extern bool deleteCat(Cat* name);
+extern bool deleteAllCats();
 
