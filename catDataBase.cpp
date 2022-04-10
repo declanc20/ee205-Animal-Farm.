@@ -30,11 +30,6 @@ using namespace std;
                 return false;
             }
 
-            //no matching name
-            if (findCatByName(pCat->getName()) == nullptr) {
-                cout << "duplicate name was found" << endl;
-                return false;
-            }
             numOfValidCats++; //increment up the number of valid cats  if no problems
         }
 

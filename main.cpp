@@ -113,22 +113,23 @@ int main(){
 
     // add the 6 cats
     assert(addCat(new Cat("Loki", MALE, PERSIAN, 1.0)));
-    assert(addCat(new Cat("Milo", MALE, MANX, 1.1)));
-    assert(addCat(new Cat("Bella", FEMALE, MAINE_COON, 1.2)));
-    assert(addCat(new Cat("Kali", FEMALE, SHORTHAIR, 1.3)));
-    assert(addCat(new Cat("Trin", FEMALE, MANX, 1.4)));
-    assert(addCat(new Cat("Chili", MALE, SHORTHAIR, 1.5)));
+   assert(addCat(new Cat("Milo", MALE, MANX, 1.1)));
+    //assert(addCat(new Cat("Bella", FEMALE, MAINE_COON, 1.2)));
+   // assert(addCat(new Cat("Kali", FEMALE, SHORTHAIR, 1.3)));
+    //assert(addCat(new Cat("Trin", FEMALE, MANX, 1.4)));
+    //assert(addCat(new Cat("Chili", MALE, SHORTHAIR, 1.5)));
 
 
 
 
     printAllCats();
-    deleteAllCats();
+    //deleteAllCats();
     //cout<<"all cats deleted"<<endl;
-    printAllCats();
+    //printAllCats();
 
-    Cat* foundCat = (findCatByName("Bella"));
-    foundCat->print();
+    //(findCatByName("Bella")) -> print();
+    //findCatByName("Bella");
+    //assert(foundCat != nullptr);
 
     cout << "Done With " << PROGRAM_TITLE << endl;
 

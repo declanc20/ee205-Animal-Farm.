@@ -11,7 +11,6 @@
 
 #include <cstring>
 #include <iostream>
-#include <stdexcept>
 #include <iostream>
 #include <iomanip>
 #include<cassert>
@@ -38,7 +37,7 @@ Cat::Cat() {
 }
 
 //contructor to populate the instance of the cat object with actual inputted information
-Cat::Cat (const char* newName ,const Gender newGender,const Breed newBreed,const Weight newWeight){
+Cat::Cat (const char* newName ,const Gender newGender,const Breed newBreed,const Weight newWeight) : Cat(){
     setName(newName);
     setGender(newGender);
     setBreed(newBreed);

@@ -52,7 +52,7 @@ public: //contructors
     Cat (const char* newName ,const Gender newGender,const Breed newBreed,const Weight newWeight);
 
 public: //desturctor
-    ~Cat();
+   virtual ~Cat();
 
 public: //Public Getters and setters
     void setName(const char* newName);

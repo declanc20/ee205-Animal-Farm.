@@ -12,8 +12,7 @@
 
 #pragma once
 
-#include<stdio.h>
-#include<stdbool.h>
+
 #include "Cat.h"
 
 #define MAX_CATS (1024)

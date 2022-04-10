@@ -29,6 +29,7 @@ bool addCat(Cat* newCat){
     numOfCats++;
 
     //Validate the database again after adding the cat
-    validateDatabase();
+    assert(validateDatabase());
 
+    return true;
 }

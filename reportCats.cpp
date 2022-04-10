@@ -38,10 +38,12 @@ bool printAllCats(){
 
  Cat* findCatByName(const char* name) {
 
-    for (Cat *pCat = catDatabaseHeadPointer; pCat != nullptr; pCat = pCat->next) {
+    for (Cat* pCat = catDatabaseHeadPointer; pCat != nullptr; pCat = pCat->next) {
         if(strcmp(name, pCat-> getName()) ==0 ) { //if names are the same then strcmp == 0
             return pCat;
         }
+    //delete this DEBUG after
+        (pCat-> print());
     }
 
     return nullptr; //if no matching name found return null
