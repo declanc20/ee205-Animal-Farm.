@@ -19,3 +19,4 @@
             const unsigned long long license );*/
 
 extern bool addCat(Cat* newCat);
+
