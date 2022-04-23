@@ -24,7 +24,7 @@ using namespace std;
 //set all Cat attributes to "blank"
 void Cat::dataToZero() {
     memset (name, 0, MAX_CAT_NAME);
-    gender = UNKNOWN_GENDER;
+    gender = Gender::UNKNOWN_GENDER;
     breed = UNKNOWN_BREED;
     isCatFixed = false;
     weight = UNKNOWN_WEIGHT;
@@ -61,15 +61,15 @@ const char *Cat::getName() const {
     return name;
 }
 
-void Cat::setGender(Gender newGender) {
-    if ( gender != UNKNOWN_GENDER){
+Gender Cat::setGender(Gender newGender) {
+    if ( gender != Gender::UNKNOWN_GENDER){
         throw (PROGRAM_TITLE "Can't change a cat's Gender");
     }
     Cat::validateGender(newGender);
     Cat::gender = newGender;
 }
 
-Gender Cat::getGender() const {
+ Gender Cat::getGender() const {
     return gender;
 }
 
@@ -125,7 +125,7 @@ bool Cat::validateName(const char* newName){
 }
 
 bool Cat::validateGender(const Gender newGender  ){
-    if (newGender == UNKNOWN_GENDER){
+    if (newGender == Gender::UNKNOWN_GENDER){
         throw (PROGRAM_TITLE "gender must be known");
     }
 
@@ -180,7 +180,7 @@ bool Cat::print() {
     cout << left ;
     cout << boolalpha ;
     FORMAT_LINE( "Cat", "name" ) << getName() << endl ;
-    FORMAT_LINE( "Cat", "gender" ) << genderName( getGender() ) << endl ;
+    FORMAT_LINE( "Cat", "gender" ) <<getGender() << endl ;
     FORMAT_LINE( "Cat", "breed" ) << breedName( getBreed() ) << endl ;
     FORMAT_LINE( "Cat", "isFixed" ) << getIsCatFixed() << endl ;
     FORMAT_LINE( "Cat", "weight" ) << getWeight() << endl ;

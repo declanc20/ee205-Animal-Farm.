@@ -43,14 +43,6 @@ const char* breedName(const enum Breed breed){
     return "NULL";
 }
 
-/*converts enum gender value to gender name as string*/
-const char* genderName(const enum Gender gender){
-    switch(gender){
-        case 0: return "UNKOWN_GENDER";
-        case 1: return "MALE";
-        case 2: return "FEMALE";
-    }
-    return "NULL";
-}
+
 
 

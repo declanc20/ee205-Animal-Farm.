@@ -23,6 +23,8 @@
 
 #include"config.h"
 #include"convertenum.h"
+#include"gender.h"
+#include "Color.h"
 
 
 #define MAX_CAT_NAME (50)
@@ -39,7 +41,7 @@ protected: //Member varaibles only available to the Cat class
 public: //public member varaibles
     Cat* next; //pointer to the next cat object
 
-    void setGender(Gender gender);
+    Gender setGender(Gender gender);
 
     void setBreed(Breed breed);
 
