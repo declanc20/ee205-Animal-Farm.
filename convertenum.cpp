@@ -17,9 +17,9 @@
 #include"convertenum.h"
 #include"config.h"
 
-/*converts enum color value to color name as a string*/
-/*char* colorName(const enum Color color){
-    switch(color){
+/*converts enum Color value to Color name as a string*/
+/*char* colorName(const enum Color Color){
+    switch(Color){
         case 0: return "BLACK";
         case 1: return "WHITE";
         case 2: return "RED";

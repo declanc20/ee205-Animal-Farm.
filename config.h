@@ -13,9 +13,7 @@
 
 #define PROGRAM_TITLE "Animal Farm 2"
 
-enum Gender{ UNKNOWN_GENDER, MALE, FEMALE };
 enum Breed{ UNKNOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
-enum Color{ BLACK, WHITE, RED, BLUE, GREEN, PINK};
 
 
 typedef float Weight;
