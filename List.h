@@ -8,6 +8,7 @@
 /// @author Declan Campbell <declanc@hawaii.edu>
 /// @date   24_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
+
 #pragma once
 
 #include "Node.h"
@@ -25,7 +26,7 @@ public:  /////////////////////////// Public Methods ////////////////////////////
     bool empty() const noexcept ;         ///< `true` if the List is empty
     unsigned int size() const noexcept ;  ///< Get the number of Node objects in the List
 
-    bool isIn( Node* aNode ) const ; ///< `true` if `aNode` is in the List
+    bool isIn( Node* aNode ) const ;///< `true` if `aNode` is in the List
     bool isSorted() const noexcept ; ///< `true` if the List is sorted
 
     Node* get_first() const noexcept ;  ///< Get the first Node in the List
