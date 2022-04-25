@@ -34,7 +34,7 @@ using namespace std;
 
 int main(){
 
-    cout << "Starting " << PROGRAM_TITLE << endl ;
+    cout << "Starting " << PROGRAM_NAME << endl ;
 
 #ifdef DEBUG
     Cat myCat = Cat();
@@ -152,7 +152,7 @@ int main(){
     printAllCats();
 
 
-    cout << "Done With " << PROGRAM_TITLE << endl;
+    cout << "Done With " << PROGRAM_NAME << endl;
 
     return 0;
 

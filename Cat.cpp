@@ -18,6 +18,7 @@
 #include "Cat.h"
 #include"config.h"
 #include"convertenum.h"
+#include"Weight.h"
 
 using namespace std;
 
@@ -27,7 +28,7 @@ void Cat::dataToZero() {
     gender = Gender::UNKNOWN_GENDER;
     breed = UNKNOWN_BREED;
     isCatFixed = false;
-    weight = UNKNOWN_WEIGHT;
+    float weight = Weight::getWeight();
     next = nullptr;
 }
 
@@ -63,7 +64,7 @@ const char *Cat::getName() const {
 
 Gender Cat::setGender(Gender newGender) {
     if ( gender != Gender::UNKNOWN_GENDER){
-        throw (PROGRAM_TITLE "Can't change a cat's Gender");
+        throw (PROGRAM_NAME "Can't change a cat's Gender");
     }
     Cat::validateGender(newGender);
     Cat::gender = newGender;
@@ -75,7 +76,7 @@ Gender Cat::setGender(Gender newGender) {
 
 void Cat::setBreed(Breed newBreed) {
     if ( breed != UNKNOWN_BREED){
-        throw (PROGRAM_TITLE "Can't change a cat's Breed");
+        throw (PROGRAM_NAME "Can't change a cat's Breed");
     }
     Cat::validateBreed(newBreed);
     Cat::breed = newBreed;
@@ -108,15 +109,15 @@ Weight Cat::getWeight() const {
 bool Cat::validateName(const char* newName){
 
     if (newName == nullptr) {
-        throw (PROGRAM_TITLE "name can't be nullptr");
+        throw (PROGRAM_NAME "name can't be nullptr");
     }
 
     if (strlen(newName) <= 0) {
-        throw (PROGRAM_TITLE "name can't be blank");
+        throw (PROGRAM_NAME "name can't be blank");
     }
 
     if (strlen(newName) > MAX_CAT_NAME){
-        throw (PROGRAM_TITLE "name can't be longer than MAX_CAT_NAME");
+        throw (PROGRAM_NAME "name can't be longer than MAX_CAT_NAME");
     }
 
     else{
@@ -126,7 +127,7 @@ bool Cat::validateName(const char* newName){
 
 bool Cat::validateGender(const Gender newGender  ){
     if (newGender == Gender::UNKNOWN_GENDER){
-        throw (PROGRAM_TITLE "gender must be known");
+        throw (PROGRAM_NAME "gender must be known");
     }
 
     else {
@@ -136,7 +137,7 @@ bool Cat::validateGender(const Gender newGender  ){
 
 bool Cat::validateBreed(const Breed newBreed  ){
     if (newBreed == UNKNOWN_BREED){
-        throw (PROGRAM_TITLE "gender must be known");
+        throw (PROGRAM_NAME "gender must be known");
     }
 
     else{
@@ -146,7 +147,7 @@ bool Cat::validateBreed(const Breed newBreed  ){
 
 bool Cat::validateWeight(const Weight newWeight ){
     if(newWeight <= 0){
-        throw (PROGRAM_TITLE "Weight must be greater than 0");
+        throw (PROGRAM_NAME "Weight must be greater than 0");
     }
 
     else {

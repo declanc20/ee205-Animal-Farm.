@@ -61,7 +61,7 @@ inline std::ostream& operator<<( std::ostream& lhs_stream, const Color& rhs_Colo
 
         default:
             /// @throw out_of_range If the enum is not mapped to a string.
-            throw std::out_of_range( PROGRAM_TITLE ": Color not mapped to a string" );
+            throw std::out_of_range(PROGRAM_NAME ": Color not mapped to a string" );
     }
     return lhs_stream;
 }
