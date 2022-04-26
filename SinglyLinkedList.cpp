@@ -15,18 +15,68 @@
 
 
 SinglyLinkedList::SinglyLinkedList() {        ///< Make a new SinglyLinkedList
-    head = nullptr;
+    assert(SinglyLinkedList::validate()); //validate list is healthy
+}
+
+void  SinglyLinkedList::push_front( Node* newNode ) {
+
+    newNode -> next = head;
+    head = newNode;
+    count++;
+
+    assert(validate());
+
+}  ///< Insert `newNode` to the beginning of the List
+
+Node* SinglyLinkedList::pop_front() noexcept { ///< Remove and return the first Node in the List
+
+    Node* poppedElement = head;
+
+    //if list is empty, return head and nothing to pop
+    if (head == nullptr){
+        return head;
+    }
+
+   if (head -> next != nullptr){
+       head = head->next; // set the head pointer to the node after the current head pointer
+   }else{
+       head = nullptr; //if next was nullptr then set head to nullptr
+   }
+
+    count--;
+
+
+
+   return poppedElement;
 
 }
 
-public:  /////////////////////////// Public Methods ////////////////////////////
-void  push_front( Node* newNode ) ;  ///< Insert `newNode` to the beginning of the List
-Node* pop_front() noexcept override; ///< Remove and return the first Node in the List
+void SinglyLinkedList::insert_after( Node* currentNode, Node* newNode ) {   ///< Insert `newNode` after `currentNode`
 
-void insert_after( Node* currentNode, Node* newNode ) ;  ///< Insert `newNode` after `currentNode`
+    assert(validate());
+    newNode-> next = currentNode -> next; //set the pointer that should come after the newNode = to what
+                                          // is currently after the current node
+   currentNode -> next = newNode; //set the newNode to be after the current node
 
-void dump() const noexcept override ;     ///< Output the contents of this container
-bool validate() const noexcept override {
+   count++;
+   assert(validate());
+
+}
+
+void SinglyLinkedList::dump() const noexcept {
+
+    Node* currentNode = head;
+
+    for(unsigned int i = 0; i != count; i++){ //increment through the list
+        currentNode ->dump();
+        currentNode = currentNode -> next;
+    }
+
+}     ///< Output the contents of this container
+
+
+
+bool SinglyLinkedList::validate() const noexcept {
 
     //check to make sure list elements are correct if only one element in the list
     if (head ->next == nullptr){
