@@ -11,7 +11,9 @@
 
 #pragma once
 
-#define PROGRAM_NAME "Animal Farm 2"
+#define 	PROGRAM_TITLE   "Animal Farm 3"
+
+#define PROGRAM_NAME "Animal Farm 3"
 
 
 /// Format the heading for dumping members of a class to the console
