@@ -13,14 +13,12 @@
 #include"config.h"
 #include <cassert>
 
-class List {
-
     List::get_next( const Node* currentNode ) { ///< Get the next Node in the List
         currentNode -> next; // set the node to the next node
         return currentNode;
     }
 
-public:  /////////////////////////// Public Methods ////////////////////////////
+
     bool List::empty() const noexcept {
         if (head == nullptr){
             return true; //if head points to null then list is empty
@@ -55,7 +53,14 @@ public:  /////////////////////////// Public Methods ////////////////////////////
 
 
     bool List::isSorted() const noexcept { ///< `true` if the List is sorted
+        Node* checkNode = head;
+        for (unsigned int i; i != count; i++){
+        if ( *checkNode > *checknode->next){
+            return false; //next node is greater than this node so list is not in order.
+        }
 
+        return true;
+    }
 
     }
 
@@ -72,9 +77,7 @@ public:  /////////////////////////// Public Methods ////////////////////////////
             assert( validate() );
         }
     }
-
-public:  ////////////////////////// Abstract Methods ///////////////////////////
+    ////////////////////////// Abstract Methods ///////////////////////////
     virtual List::Node* pop_front() noexcept = 0 ;     ///< Remove and return the first Node in the List
     virtual void List::dump() const noexcept = 0;      ///< Output the contents of this container
     virtual bool List::validate() const noexcept = 0;  ///< Check to see if the container is valid
-};
