@@ -55,6 +55,7 @@ public:   /////////////////////// Constructors ////////////////////////////////
             ,const std::string&     newSpecies
     );
 
+
     Animal(const std::string &species, const std::string &classification, Gender gender, const Weight &weight);
 
 public:   ///////////////////// Getters & Setters /////////////////////////////
