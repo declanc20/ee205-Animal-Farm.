@@ -15,6 +15,7 @@
 #include "config.h"
 #include "Animal.h"
 
+using namespace  std;
 const std::string Animal::KINGDOM_NAME = "Animalia";
 
 
@@ -72,4 +73,46 @@ std::string Animal::getKingdom() const noexcept {        ///< Get the kingdom, w
     validate();
     }
 
-    w
+ bool Animal::validateClassification( const std::string& checkClassification ) noexcept {  ///< Verify the biological classification is valid
+    //check to make sure classification is not empty
+    if(checkClassification.empty() == true){
+        return false;// if classification entered was empty string return false
+    }
+
+    return true;
+}
+
+  bool Animal::validateSpecies( const std::string& checkSpecies ) noexcept{
+      if(checkSpecies.empty() == true){
+          return false;// if species entered was empty string return false
+      }
+
+      return true;
+
+}
+
+void Animal::dump() const noexcept {
+
+    PRINT_HEADING_FOR_DUMP;
+
+    Node::dump(); //prints the addresses of the containers in memory
+
+        FORMAT_LINE_FOR_DUMP( "Animal", "this" ) << this << endl ;
+        FORMAT_LINE_FOR_DUMP( "Animal", "kingdom" ) << getKingdom() << endl ;
+        FORMAT_LINE_FOR_DUMP( "Animal", "classification" ) <<  getClassification() << endl ;
+        FORMAT_LINE_FOR_DUMP( "Animal", "species" ) << getSpecies() << endl ;
+        FORMAT_LINE_FOR_DUMP( "Weight", "gender" ) << getGender()<< endl ;
+        FORMAT_LINE_FOR_DUMP( "Weight", "weight" ) << weight << endl ;
+
+}
+
+bool Animal::validate() const noexcept {
+    //make sure all elemetns are healthy
+    assert(Animal::validateSpecies(getSpecies()));
+    assert(Animal::validateClassification(getClassification()));
+    assert( weight.validate());
+    assert(Node::validate());
+
+    return true;
+
+}
