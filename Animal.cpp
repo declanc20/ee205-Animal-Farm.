@@ -42,19 +42,34 @@ Animal::Animal( const Gender           newGender
     Animal::validate();
 }
 
-
-const std::string &Animal::getKingdomName() {
+std::string Animal::getKingdom() const noexcept {        ///< Get the kingdom, which is `Animalia`
     return KINGDOM_NAME;
 }
 
-void Animal::setSpecies(const std::string &species) {
-    Animal::species = species;
-}
+    std::string Animal::getClassification() const noexcept {  ///< Get the classification
+    return classification;
+    }
 
-void Animal::setClassification(const std::string &classification) {
-    Animal::classification = classification;
-}
+    std::string Animal::getSpecies() const noexcept {         ///< Get the species
+    return species;
+    }
 
-void Animal::setWeight(const Weight &weight) {
-    Animal::weight = weight;
-}
+    Gender Animal::getGender() const noexcept{  ///< Get the Animal's Gender
+    return gender;
+    }
+
+    Weight::t_weight Animal::getWeight() const noexcept {         ///< Get the Animal's Weight
+    return weight.getWeight();
+    }
+
+    void Animal::setWeight( const Weight::t_weight newWeight ) {  ///< Set the Animal's Weight
+        weight.setWeight(newWeight);
+    }
+
+    void Animal::setGender( const Gender newGender){
+    validate();
+    gender= newGender;
+    validate();
+    }
+
+    w

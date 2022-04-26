@@ -30,6 +30,38 @@
 ///
 /// @see https://en.wikipedia.org/wiki/Animal
 /// @see https://en.wikipedia.org/wiki/Taxonomy_(biology)
+///////////////////////////////////////////////////////////////////////////////
+///         University of Hawaii, College of Engineering
+/// @brief  ee205_lab10d_animal_farm_3 - EE 205 - Spr 2022
+///
+/// Where the wild things roam
+///
+/// @file Animal.h
+/// @version 1.0
+///
+/// @author Mark Nelson <marknels@hawaii.edu>
+/// @date   30_Mar_2022
+///////////////////////////////////////////////////////////////////////////////
+#pragma once
+
+#include <string>
+
+#include "config.h"
+#include "Node.h"
+#include "Gender.h"
+#include "Weight.h"
+
+
+/// A class that encompasses all Animals on the farm.
+///
+/// This class should be the parent class of all of the Animals on the farm.
+/// It contains 1 abstract method `speak()` that each Animal must implement
+/// before it can be instantiated.
+///
+/// Animals understand things I don't know -- and they know languages which are not made of words.”
+///
+/// @see https://en.wikipedia.org/wiki/Animal
+/// @see https://en.wikipedia.org/wiki/Taxonomy_(biology)
 class Animal : public Node {
 public:   //////////////////////// Constants ///////////////////////////////////
     static const std::string KINGDOM_NAME;  ///< The scientific name of the Animal Kingdom.
@@ -55,9 +87,6 @@ public:   /////////////////////// Constructors ////////////////////////////////
             ,const std::string&     newSpecies
     );
 
-
-    Animal(const std::string &species, const std::string &classification, Gender gender, const Weight &weight);
-
 public:   ///////////////////// Getters & Setters /////////////////////////////
     std::string getKingdom() const noexcept;         ///< Get the kingdom, which is `Animalia`
     std::string getClassification() const noexcept;  ///< Get the classification
@@ -81,16 +110,8 @@ public:   ////////////////////// Abstract Methods //////////////////////////////
 
 public:   ////////////////////////// Methods //////////////////////////////////
     void dump() const noexcept override;       ///< Output the contents of this object
-    bool validate() const noexcept override;
-
-    static const std::string &getKingdomName();
-
-    void setSpecies(const std::string &species);
-
-    void setClassification(const std::string &classification);
-
-    void setWeight(const Weight &weight);
-    ///< Check to see if the Animal object is valid
+    bool validate() const noexcept override;   ///< Check to see if the Animal object is valid
+};
 };
 
 
