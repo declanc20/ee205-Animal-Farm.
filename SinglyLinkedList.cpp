@@ -91,5 +91,6 @@ bool SinglyLinkedList::validate() const noexcept {
     //after going through the nodes in the list we should match the size of the list
     assert(size() == checkCount);
 
+    return true;
 
 } ///< Check to see if the container is valid
