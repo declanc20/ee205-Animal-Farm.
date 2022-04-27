@@ -14,12 +14,9 @@
 #include <ostream>
 
 
-typedef float t_weight;
 
-typedef float t_weight;
 
 class Weight {
-
 
 public: //Enumerators
     enum UnitOfWeight {POUND, KILO, SLUG };

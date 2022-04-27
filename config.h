@@ -27,7 +27,7 @@
 /// Format a line for dumping the members of a class to the console.
 /// Setup the fields for printing (space pad, left justify, etc.)
 #define FORMAT_LINE_FOR_DUMP( className, member ) \
- std::cout << std::setfill( ' ' ) /* Space pad */ \
+ std::cout << std::fill( ' ' ) /* Space pad */ \
  << std::left /* Left justify */ \
  << std::boolalpha /* Print `true` or `false` for `bool`s */ \
  << std::setw(8) << (className) \
