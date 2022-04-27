@@ -29,9 +29,10 @@
 
 /// Felis Catus
 ///
+
 class Cat : public Mammal {
 public:   //////////////////////// Constants ///////////////////////////////////
-    static const std::string      SPECIES_NAME;  ///< The scientific name for this species
+    static const std::string      SPECIES_NAME;   ///< The scientific name for this species
     static const Weight::t_weight MAX_WEIGHT;    ///< The maximum weight for this species
 
 protected:  ///////////////////////// Member Variables /////////////////////////
@@ -40,7 +41,6 @@ protected:  ///////////////////////// Member Variables /////////////////////////
 
 public:  //////////////////////////// Constructors /////////////////////////////
     /// Create a Cat with the minimum fields necessary to have a valid Cat
-    /// @todo Why can't this be defined in the .cpp file??
     explicit Cat( const std::string& newName ) : Mammal( MAX_WEIGHT, SPECIES_NAME ) {
         if( !validateName( newName) ) {
             /// @throws out_of_range If the Cat doesn't have a name
