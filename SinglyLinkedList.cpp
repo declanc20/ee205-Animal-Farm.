@@ -37,14 +37,10 @@ Node* SinglyLinkedList::pop_front() noexcept { ///< Remove and return the first 
         return head;
     }
 
-   if (head -> next != nullptr){
-       head = head->next; // set the head pointer to the node after the current head pointer
-   }else{
-       head = nullptr; //if next was nullptr then set head to nullptr
-   }
+    head = head->next; // set the head pointer to the node after the current head pointer
+
 
     count--;
-
 
 
    return poppedElement;

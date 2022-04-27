@@ -24,7 +24,7 @@
 #include <string>
 
 #include "config.h"
-//#include "Mammal.h"
+#include "Mammal.h"
 
 
 /// Felis Catus

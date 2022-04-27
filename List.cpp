@@ -41,9 +41,8 @@
             if (checkNode == aNode){
                 return true;
             }
-            else{
                 checkNode = checkNode-> next; //if the checkNode was not what we're looking for point to next node
-            }
+
         }
 
         return false; //if the above loop did not return true, then node is not in the list
