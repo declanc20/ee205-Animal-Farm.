@@ -15,7 +15,7 @@
 #include <stdexcept>
 #include <iomanip>
 #include "Weight.h"
-#include "config,h"
+#include "config.h"
 
 using namespace std;
 
