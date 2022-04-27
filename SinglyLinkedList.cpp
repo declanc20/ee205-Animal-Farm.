@@ -73,22 +73,28 @@ void SinglyLinkedList::dump() const noexcept {
 
 
 bool SinglyLinkedList::validate() const noexcept {
+   if(head == nullptr){
+        assert(count ==0);
+    }
 
     //check to make sure list elements are correct if only one element in the list
-    if (head ->next == nullptr){
-        assert(count==1); // should only be one element in the list in this case.
+   if (head != nullptr){
+        if (head->next == nullptr) {
+        assert(count == 1); // should only be one element in the list in this case.
+    }
     }
 
 
     //ensure that number of elements in the list is correct
-    unsigned int checkCount;
+    unsigned int checkCount = 0;
     Node* checkNode = head;
     while (checkNode != nullptr){ //checl all nodes until end of list
-        checkNode = checkNode->next; //increment up the node ot be checked
         checkCount++;
+        checkNode = checkNode->next; //increment up the node ot be checked
     }
 
     //after going through the nodes in the list we should match the size of the list
+     //debug: std::cout<<checkCount <<std::endl;
     assert(size() == checkCount);
 
     return true;

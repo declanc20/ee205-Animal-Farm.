@@ -69,11 +69,11 @@ public: //conversion constants and labels
 
 public: //weight conversions
 
-    static t_weight fromKilogramToPound(t_weight kilogram) noexcept;
-    static t_weight fromPoundToKilogram(t_weight poun) noexcept;
-    static t_weight fromSlugToPound(t_weight slug) noexcept;
-    static t_weight fromPoundToSlug(t_weight pound) noexcept;
-    static t_weight convertWeight(t_weight fromWeight, UnitOfWeight fromUnit, UnitOfWeight toUnit) noexcept;
+    static float fromKilogramToPound(t_weight kilogram) noexcept;
+    static float fromPoundToKilogram(t_weight poun) noexcept;
+    static float fromSlugToPound(t_weight slug) noexcept;
+    static float fromPoundToSlug(t_weight pound) noexcept;
+    static float convertWeight(t_weight fromWeight, UnitOfWeight fromUnit, UnitOfWeight toUnit) noexcept;
 
 public://validation functions
     bool isWeightValid(t_weight checkWeight) const noexcept;
