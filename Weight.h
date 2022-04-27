@@ -8,7 +8,7 @@
 /// @author Declan Campbell <declanc@hawaii.edu>
 /// @date   22_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
-
+#pragma once
 
 #include <string>
 #include <ostream>
@@ -79,8 +79,6 @@ public://validation functions
     bool isWeightValid(t_weight checkWeight) const noexcept;
     bool validate() const noexcept;
 
-    friend std::ostream &operator<<(std::ostream &os, const Weight &weight);
-
     bool operator<(const Weight &rhs_Weight) const;
 
     bool operator==(const Weight &rhs_Weight) const;
@@ -92,3 +90,7 @@ public: //print function
 
 };
 
+
+std::ostream& operator<<( std::ostream& lhs_stream, const Weight& rhs_Weight ) ;
+
+std::ostream& operator<<( std::ostream& lhs_stream, Weight::UnitOfWeight rhs_UnitOfWeight );

@@ -15,6 +15,7 @@
 #include <stdexcept>
 #include <iomanip>
 #include "Weight.h"
+#include "config,h"
 
 using namespace std;
 
@@ -186,7 +187,7 @@ bool Weight::isWeightValid(t_weight checkWeight) const noexcept {
     else if (bHasMax == true && checkWeight >0 && checkWeight<=maxWeight){
         return true;
     }
-    throw ("weight is not valid");
+    throw invalid_argument("weight is not valid");
 }
 bool Weight::validate() const noexcept {
     if( Weight::weight == UNKNOWN_WEIGHT){
@@ -198,7 +199,7 @@ bool Weight::validate() const noexcept {
         return true;
     }
 
-    throw ("weight is not valid");
+    throw invalid_argument("weight is not valid");
 }
 
 /// Format a line for printing the members of a class
