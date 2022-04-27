@@ -70,7 +70,7 @@ using namespace std;
         }///< Check if `newName` is valid
         return true;
     }
-};
+
 
 
 

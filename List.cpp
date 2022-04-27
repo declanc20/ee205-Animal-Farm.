@@ -52,13 +52,13 @@
 
     bool List::isSorted() const noexcept { ///< `true` if the List is sorted
         Node* checkNode = head;
-        for (unsigned int i; i != count; i++){
-        if ( *checkNode > *checknode->next){
-            return false; //next node is greater than this node so list is not in order.
+        for (unsigned int i; i != count; i++) {
+            if (*checkNode > *checkNode->next) {
+                return false; //next node is greater than this node so list is not in order.
+            }
         }
-
         return true;
-    }
+
 
     }
 
@@ -67,15 +67,11 @@
     }
 
     void List::deleteAllNodes() noexcept { ///< Delete all of the nodes in the List
-        void List::deleteAllNodes() noexcept {
             assert( validate() );
             while( head != nullptr ) {
                 pop_front();
             }
             assert( validate() );
         }
-    }
-    ////////////////////////// Abstract Methods ///////////////////////////
-    virtual List::Node* pop_front() noexcept = 0 ;     ///< Remove and return the first Node in the List
-    virtual void List::dump() const noexcept = 0;      ///< Output the contents of this container
-    virtual bool List::validate() const noexcept = 0;  ///< Check to see if the container is valid
+
+
