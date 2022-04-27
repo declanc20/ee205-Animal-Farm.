@@ -76,7 +76,7 @@ bool SinglyLinkedList::validate() const noexcept {
 
     //check to make sure list elements are correct if only one element in the list
     if (head ->next == nullptr){
-        assert(count=1); // should only be one element in the list in this case.
+        assert(count==1); // should only be one element in the list in this case.
     }
 
 

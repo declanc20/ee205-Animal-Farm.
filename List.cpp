@@ -13,9 +13,8 @@
 #include"config.h"
 #include <cassert>
 
-    List::get_next( const Node* currentNode ) { ///< Get the next Node in the List
-        currentNode -> next; // set the node to the next node
-        return currentNode;
+    Node* List::get_next( const Node* currentNode ) { ///< Get the next Node in the List
+        return currentNode -> next;
     }
 
 

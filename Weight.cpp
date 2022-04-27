@@ -122,7 +122,7 @@ void Weight::setWeight(t_weight newWeight) {
     Weight::weight = newWeight;
 }
 
-t_weight Weight::getMaxWeight() const noexcept{
+Weight::t_weight Weight::getMaxWeight() const noexcept{
     return maxWeight;
 }
 
@@ -149,19 +149,19 @@ bool Weight::isWeightKnown() const noexcept {
 
 
 //weight conversion functions
-t_weight Weight::fromKilogramToPound(t_weight kilogram) noexcept{
+Weight::t_weight Weight::fromKilogramToPound(t_weight kilogram) noexcept{
     return kilogram/KILOS_IN_A_POUND;
 }
-t_weight Weight::fromPoundToKilogram(t_weight pound) noexcept{
+Weight::t_weight Weight::fromPoundToKilogram(t_weight pound) noexcept{
     return pound*KILOS_IN_A_POUND;
 }
-t_weight Weight::fromSlugToPound(t_weight slug) noexcept {
+Weight::t_weight Weight::fromSlugToPound(t_weight slug) noexcept {
     return slug / SLUGS_IN_A_POUND;
 }
-t_weight Weight::fromPoundToSlug(t_weight pound) noexcept{
+Weight::t_weight Weight::fromPoundToSlug(t_weight pound) noexcept{
     return pound * SLUGS_IN_A_POUND;
 }
-t_weight Weight::convertWeight(t_weight fromWeight, Weight::UnitOfWeight fromUnit, Weight::UnitOfWeight toUnit) noexcept{
+Weight::t_weight Weight::convertWeight(t_weight fromWeight, Weight::UnitOfWeight fromUnit, Weight::UnitOfWeight toUnit) noexcept{
 
     //always convert to pounds (a common unit)
     t_weight weightInPounds;
