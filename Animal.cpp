@@ -101,8 +101,8 @@ void Animal::dump() const noexcept {
         FORMAT_LINE_FOR_DUMP( "Animal", "kingdom" ) << getKingdom() << endl ;
         FORMAT_LINE_FOR_DUMP( "Animal", "classification" ) <<  getClassification() << endl ;
         FORMAT_LINE_FOR_DUMP( "Animal", "species" ) << getSpecies() << endl ;
-        FORMAT_LINE_FOR_DUMP( "Weight", "gender" ) << getGender()<< endl ;
-        FORMAT_LINE_FOR_DUMP( "Weight", "weight" ) << weight << endl ;
+        FORMAT_LINE_FOR_DUMP( "Animal", "gender" ) << getGender()<< endl ;
+        FORMAT_LINE_FOR_DUMP( "Animal", "weight" ) << weight << endl ;
 
 }
 

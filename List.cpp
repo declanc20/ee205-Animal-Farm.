@@ -13,6 +13,8 @@
 #include"config.h"
 #include <cassert>
 
+using namespace std;
+
     Node* List::get_next( const Node* currentNode ) { ///< Get the next Node in the List
         return currentNode -> next;
     }
@@ -22,9 +24,7 @@
         if (head == nullptr){
             return true; //if head points to null then list is empty
         }
-        else{
             return false;
-        }
     }         ///< `true` if the List is empty
 
     unsigned int List::size() const noexcept{
