@@ -30,14 +30,13 @@ int main() {
     catDB.push_front( new Cat( "Kali", Color::CALICO, true, Gender::FEMALE, 1.3 ) ) ;
     catDB.push_front( new Cat( "Trin", Color::WHITE, true, Gender::FEMALE, 1.4 ) ) ;
     catDB.insert_after(catDB.get_first(), new Cat( "Chili", Color::GINGER, true,Gender::MALE, 1.5 ) );
-   /* for( Animal* pAnimal = (Animal*)catDB.get_first() ; pAnimal != nullptr ; pAnimal =
+   for( Animal* pAnimal = (Animal*)catDB.get_first() ; pAnimal != nullptr ; pAnimal =
                                                                                      (Animal*)List::get_next( (Node*)pAnimal ) ) {
         cout << pAnimal->speak() << endl;
-    }*/
+    }
     catDB.validate() ;
     catDB.dump() ;
     catDB.deleteAllNodes() ;
-    cout<< "\n \n \n deleted" << endl;
     catDB.dump() ;
     cout << "Done with " << PROGRAM_TITLE ;
     return( EXIT_SUCCESS ) ;
